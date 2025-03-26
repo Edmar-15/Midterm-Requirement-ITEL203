@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Pet Adoption</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#" onclick="showSection('home')">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#" onclick="showSection('about')">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#" onclick="showSection('pets')">Available Pets</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#" onclick="showSection('adopt')">Adopt a Pet</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#" onclick="showSection('contact')">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section with Carousel -->
+    <div id="home" class="section">
+        <section class="hero">
+            <div class="container text-center">
+                <h1>Find Your New Best Friend</h1>
+                <p>Adopt a pet and give them a loving home!</p>
+                <a href="#" class="btn btn-light" onclick="showSection('pets')">View Pets</a>
+            </div>
+        </section>
+
+        <!-- Carousel with Pet Info -->
+        <div id="petCarousel" class="carousel slide my-5 container" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <!-- Image -->
+                        <div class="col-md-6">
+                            <img src="img/mingming.jpg" class="d-block w-100 rounded" alt="Mingming">
+                        </div>
+                        <!-- Pet Info -->
+                        <div class="col-md-6">
+                            <h2>Meet Mingming</h2>
+                            <p><strong>Age:</strong> 2 years</p>
+                            <p><strong>Breed:</strong> Pecking Duck</p>
+                            <p><strong>Description:</strong> Mingming is a playful and loving duck who enjoys cuddles. A former member of the well known squad "Wonder Pets".</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <!-- Image -->
+                        <div class="col-md-6">
+                            <img src="img/lando.jpg" class="d-block w-100 rounded" alt="Lando">
+                        </div>
+                        <!-- Pet Info -->
+                        <div class="col-md-6">
+                            <h2>Meet Lando</h2>
+                            <p><strong>Age:</strong> 3 years</p>
+                            <p><strong>Breed:</strong> Sphynx Cat</p>
+                            <p><strong>Description:</strong> Lando is a nonchalant and zen cat that loves to chill.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <!-- Image -->
+                        <div class="col-md-6">
+                            <img src="img/vicky.jpg" class="d-block w-100 rounded" alt="Vicky">
+                        </div>
+                        <!-- Pet Info -->
+                        <div class="col-md-6">
+                            <h2>Meet Vicky</h2>
+                            <p><strong>Age:</strong> 1.5 years</p>
+                            <p><strong>Breed:</strong> Piglet</p>
+                            <p><strong>Description:</strong> Vicky is a calm and affectionate piglet that loves belly rubs.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <!-- Image -->
+                        <div class="col-md-6">
+                            <img src="img/rick.jpg" class="d-block w-100 rounded" alt="Vicky">
+                        </div>
+                        <!-- Pet Info -->
+                        <div class="col-md-6">
+                            <h2>Meet Rick</h2>
+                            <p><strong>Age:</strong> 1.5 years</p>
+                            <p><strong>Breed:</strong> Green Frog</p>
+                            <p><strong>Description:</strong> Ricl is a calm frog that loves sitting upright.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <!-- Image -->
+                        <div class="col-md-6">
+                            <img src="img/marya.jpg" class="d-block w-100 rounded" alt="Vicky">
+                        </div>
+                        <!-- Pet Info -->
+                        <div class="col-md-6">
+                            <h2>Meet Marya</h2>
+                            <p><strong>Age:</strong> 2 years</p>
+                            <p><strong>Breed:</strong> Golden Cat</p>
+                            <p><strong>Description:</strong> Marya is a calm and affectionate cat that loves belly rubs.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#petCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#petCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section">
+        <section class="hero">
+            <div class="container text-center">
+                <h3>About Us</h3>
+            </div>
+        </section>
+        
+        <section class="about-content">
+            <div class="container">
+                <h3>Who We Are</h3>
+                <p>We are a passionate team dedicated to helping stray, abandoned, and rescued animals find safe and loving homes. Our mission is to connect these wonderful pets with compassionate individuals who can provide them with the care and affection they deserve.</p>
+
+                <h3>Our Mission</h3>
+                <p>Our goal is to reduce the number of homeless pets by promoting adoption, responsible pet ownership, and animal welfare awareness. We work closely with shelters, foster homes, and volunteers to ensure that every pet gets a second chance at life.</p>
+
+                <h3>Why Choose Adoption?</h3>
+                <p>By adopting a pet, you’re not just gaining a new companion—you’re saving a life. Every adoption helps free up space in shelters and rescue organizations, allowing them to help more animals in need. Plus, adopted pets bring unconditional love and joy to their new families!</p>
+
+                <h3>How You Can Help</h3>
+                <p>If you’re not ready to adopt, there are still many ways to support our cause! You can foster, volunteer, donate, or spread awareness about pet adoption. Every effort makes a difference in the lives of these animals.</p>
+
+                <h3>Get in Touch</h3>
+                <p>Have questions? Want to learn more about the adoption process? Feel free to reach out to us! Together, we can give every pet the happy home they deserve.</p>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Available Pets with Search Bar -->
+    <div id="pets" class="section">
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Meet Our Pets</h2>
+            <input type="text" id="searchBar" class="form-control mb-3" placeholder="Search for pets..." onkeyup="filterPets()">
+            <div class="row" id="petList">
+                <div class="col-md-4 pet-card mb-4" data-name="Araw" data-type="Duck">
+                    <div class="card">
+                        <img src="img/araw.jpg" class="card-img-top" alt="Araw">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Araw</h5>
+                            <p><strong>Age:</strong> 2 years</p>
+                            <p><strong>Breed:</strong> White Duck</p>
+                            <p class="card-text">A playful and friendly duck.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Chikie" data-type="Duck">
+                    <div class="card">
+                        <img src="img/chikie.jpg" class="card-img-top" alt="Chikie">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Chikie</h5>
+                            <p><strong>Age:</strong> 2 years</p>
+                            <p><strong>Breed:</strong> White Duck</p>
+                            <p class="card-text">A duck who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Gummy" data-type="Dog">
+                    <div class="card">
+                        <img src="img/gummy.jpg" class="card-img-top" alt="Gummy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Gummy</h5>
+                            <p><strong>Age:</strong> 2 years</p>
+                            <p><strong>Breed:</strong> White Dog</p>
+                            <p class="card-text">A dog who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Gway" data-type="Otter">
+                    <div class="card">
+                        <img src="img/gway.jpg" class="card-img-top" alt="Gway">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Gway</h5>
+                            <p><strong>Age:</strong> 2 years</p>
+                            <p><strong>Breed:</strong> Otter</p>
+                            <p class="card-text">An otter who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Happy" data-type="Dog">
+                    <div class="card">
+                        <img src="img/happy.jpg" class="card-img-top" alt="Happy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Happy</h5>
+                            <p><strong>Age:</strong> 1.2 years</p>
+                            <p><strong>Breed:</strong> Golden Retriever</p>
+                            <p class="card-text">An dog who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Kitty" data-type="Cat">
+                    <div class="card">
+                        <img src="img/kitty.jpg" class="card-img-top" alt="Kitty">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Kitty</h5>
+                            <p><strong>Age:</strong> 1.7 years</p>
+                            <p><strong>Breed:</strong> Ash Cat</p>
+                            <p class="card-text">An cat who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Lando" data-type="Cat">
+                    <div class="card">
+                        <img src="img/lando.jpg" class="card-img-top" alt="Lando">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Lando</h5>
+                            <p><strong>Age:</strong> 3 years</p>
+                            <p><strong>Breed:</strong> Sphynx Cat</p>
+                            <p class="card-text">Nonchalant and zen cat that loves to chill.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Lucky" data-type="Dog">
+                    <div class="card">
+                        <img src="img/lucky.jpg" class="card-img-top" alt="Lucky">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Lucky</h5>
+                            <p><strong>Age:</strong> 4 months</p>
+                            <p><strong>Breed:</strong> Dachsund</p>
+                            <p class="card-text">A dog who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Luna" data-type="Cat">
+                    <div class="card">
+                        <img src="img/Luna.jpg" class="card-img-top" alt="Lucky">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Luna</h5>
+                            <p><strong>Age:</strong> 2.3 years</p>
+                            <p><strong>Breed:</strong> Grey Cat</p>
+                            <p class="card-text">A cat who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Marya" data-type="Cat">
+                    <div class="card">
+                        <img src="img/marya.jpg" class="card-img-top" alt="Marya">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Marya</h5>
+                            <p><strong>Age:</strong> 4 years</p>
+                            <p><strong>Breed:</strong> Golden Cat</p>
+                            <p class="card-text">A calm and affectionate cat that loves belly rubs.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Matcha" data-type="Rabbit">
+                    <div class="card">
+                        <img src="img/Matcha.jpg" class="card-img-top" alt="Matcha">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Matcha</h5>
+                            <p><strong>Age:</strong> 1.2 years</p>
+                            <p><strong>Breed:</strong> Grey Rabbit</p>
+                            <p class="card-text">A rabbit who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Melon" data-type="Gecko">
+                    <div class="card">
+                        <img src="img/melon.jpg" class="card-img-top" alt="Melon">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Melon</h5>
+                            <p><strong>Age:</strong> 1 year</p>
+                            <p><strong>Breed:</strong> Gecko Slimy</p>
+                            <p class="card-text">A gecko who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Mingming" data-type="Duck">
+                    <div class="card">
+                        <img src="img/mingming.jpg" class="card-img-top" alt="Mingming">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mingming</h5>
+                            <p><strong>Age:</strong> 2 years</p>
+                            <p><strong>Breed:</strong> Pecking Duck</p>
+                            <p class="card-text">A playful and loving duck who enjoys cuddles.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Minky" data-type="Cat">
+                    <div class="card">
+                        <img src="img/minky.jpg" class="card-img-top" alt="Minky">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Minky</h5>
+                            <p><strong>Age:</strong> 4 years</p>
+                            <p><strong>Breed:</strong> Golden Cat</p>
+                            <p class="card-text">A cat who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Mocha" data-type="Rabbit">
+                    <div class="card">
+                        <img src="img/mocha.jpg" class="card-img-top" alt="Mocha">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mocha</h5>
+                            <p><strong>Age:</strong> 1 year</p>
+                            <p><strong>Breed:</strong> Wild Rabbit</p>
+                            <p class="card-text">A rabbit who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Mowie" data-type="Rabbit">
+                    <div class="card">
+                        <img src="img/mowie.jpg" class="card-img-top" alt="Mowie">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mowie</h5>
+                            <p><strong>Age:</strong> 2 year</p>
+                            <p><strong>Breed:</strong> Brown Rabbit</p>
+                            <p class="card-text">A rabbit who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Rick" data-type="Frog">
+                    <div class="card">
+                        <img src="img/rick.jpg" class="card-img-top" alt="Mocha">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Rick</h5>
+                            <p><strong>Age:</strong> 1 year</p>
+                            <p><strong>Breed:</strong> Green Frog</p>
+                            <p class="card-text">A frog who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Sakura" data-type="Dog">
+                    <div class="card">
+                        <img src="img/Sakura.jpg" class="card-img-top" alt="Mocha">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sakura</h5>
+                            <p><strong>Age:</strong> 1.6 year</p>
+                            <p><strong>Breed:</strong> Basset Hound</p>
+                            <p class="card-text">A dog who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Scarlette" data-type="Cat">
+                    <div class="card">
+                        <img src="img/scarlette_star.jpg" class="card-img-top" alt="Scarlette">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Scarlette Star</h5>
+                            <p><strong>Age:</strong> 2 year</p>
+                            <p><strong>Breed:</strong> Siamese Cat</p>
+                            <p class="card-text">A cat who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Snowies" data-type="Cat">
+                    <div class="card">
+                        <img src="img/snowies.jpg" class="card-img-top" alt="Snowies">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Snowies</h5>
+                            <p><strong>Age:</strong> 1 year</p>
+                            <p><strong>Breed:</strong> White Cat</p>
+                            <p class="card-text">A cat who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 pet-card mb-4" data-name="Vicky" data-type="Piglet">
+                    <div class="card">
+                        <img src="img/vicky.jpg" class="card-img-top" alt="Vicky">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Vicky</h5>
+                            <p><strong>Age:</strong> 1.8 year</p>
+                            <p><strong>Breed:</strong> Piglet</p>
+                            <p class="card-text">A piglet who loves to play.</p>
+                            <a class="btn btn-primary" href="#adopt" onclick="showSection('adopt')">Adopt Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Adoption Form -->
+    <div id="adopt" class="section">
+        <div class="container my-5">
+            <h2 class="text-center">Adopt a Pet</h2>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Your Name</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Pet Name</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Why do you want to adopt?</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+     <!-- Contact Section -->
+     <div id="contact" class="section">
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <p class="text-center">Have questions or ready to adopt? Fill out the form below, and we'll get back to you soon!</p>
+            
+            <form action="" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="pet-name" class="form-label">Pet Name (if inquiring about a specific pet)</label>
+                    <input type="text" class="form-control" id="pet-name" name="pet-name">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message / Why do you want to adopt?</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+            </form>
+
+            <div class="text-center mt-4">
+                <p><strong>Email:</strong> contact@myadoptionsite.com</p>
+                <p><strong>Phone:</strong> (+63) 9123-456-7890</p>
+                <p><strong>Location:</strong> 123 Adoption Street, Pet City</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

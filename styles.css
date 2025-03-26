@@ -1,0 +1,44 @@
+body {
+    background-color: #E3F2FD;
+    color: #37474F;
+}
+
+.navbar {
+    background-color: #81C784 !important;
+}
+
+.hero {
+    background: #A5D6A7;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #81C784;
+    border: none;
+}
+
+.section {
+    display: none;
+}
+
+#home {
+    display: block;
+}
+
+.carousel img {
+    border-radius: 10px;
+    height: 550px;
+    width: 350px;
+}
+
+.card img {
+    border-radius: 10px;
+    height: 500px;
+}
