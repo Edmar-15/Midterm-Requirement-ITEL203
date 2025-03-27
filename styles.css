@@ -5,6 +5,7 @@ body {
 
 .navbar {
     background-color: #81C784 !important;
+    position: sticky;
 }
 
 .hero {
